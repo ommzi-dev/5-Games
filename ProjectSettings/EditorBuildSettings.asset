@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/5Games/1_Scenes/LoginSplash.unity
+    guid: 4a2f5622cbdf149f99c1d5f0d23a622e
+  - enabled: 1
+    path: Assets/5Games/1_Scenes/WhotPlay.unity
+    guid: 0872f62289978461a9b56cf0ddace148
+  - enabled: 1
+    path: Assets/5Games/1_Scenes/LudoMenu.unity
+    guid: 08bb5fa99022a41bea561b94ed09f77b
+  - enabled: 1
+    path: Assets/5Games/1_Scenes/GameScene.unity
+    guid: ab8c954096f9b4e7794e7f7284cd686a
+  - enabled: 1
+    path: Assets/5Games/1_Scenes/PoolLoginSplash.unity
+    guid: 9e158f2d3bcafe94bae72e732fc54517
+  - enabled: 1
+    path: Assets/5Games/1_Scenes/Pool_Menu.unity
+    guid: 0b9c478e0b0851c4c9f2ea490c4d5913
+  - enabled: 1
+    path: Assets/5Games/1_Scenes/Pool_GameScene_Original.unity
+    guid: cc305359b20c44c969982101dff7fdf5
+  - enabled: 1
+    path: Assets/5Games/1_Scenes/Pool_WinnerScene.unity
+    guid: 76d724640b5cf42f39929e6d6f2d92d0
+  m_configObjects: {}

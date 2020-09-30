@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.ommzisolutions.spaceattack" android:installLocation="preferExternal" android:versionCode="1" android:versionName="2.4">
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+  <permission android:name="com.ommzisolutions.spaceattack.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+  <uses-permission android:name="com.ommzisolutions.spaceattack.permission.C2D_MESSAGE" />
+  <!-- This app has permission to register and receive data message. -->
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <application android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:icon="@drawable/app_icon" android:label="@string/app_name" android:usesCleartextTraffic="true" android:debuggable="true">
+    <activity android:name="com.unity3d.player.UnityPlayerActivity" android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+      <intent-filter>
+        <action android:name="com.ommzisolutions.spaceattack.launch" />
+        <action android:name="com.ommzisolutions.spaceattack.MESSAGE" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+      </intent-filter>
+    </activity>
+    <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:screenOrientation="portrait" android:name="com.unity3d.player.UnityPlayerNativeActivity" android:launchMode="singleTask">
+      <meta-data android:value="unity" android:name="android.app.lib_name" />
+      <meta-data android:value="false" android:name="unityplayer.ForwardNativeEventsToDalvik" />
+      <meta-data android:name="PW_BROADCAST_PUSH" android:value="true" />
+    </activity>
+    <!--<activity android:name="com.facebook.unity.FBUnityLoginActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityDialogsActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityAppLinkActivity" android:exported="true" />
+    <activity android:name="com.facebook.unity.FBUnityDeepLinkingActivity" android:exported="true" />
+    <activity android:name="com.facebook.unity.FBUnityGameRequestActivity" />
+    <activity android:name="com.facebook.unity.FBUnityCreateGameGroupActivity" />
+    <activity android:name="com.facebook.unity.FBUnityJoinGameGroupActivity" />
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb462190727704555" />
+    <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true" />
+    <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true" />
+   <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider462190727704555" android:exported="true" />-->
+    <!-- Flurry Agent settings; please update -->
+    <meta-data android:name="flurry_apikey" android:value="8GKRPNMHHSZKJJH9D9WC" />
+    <meta-data android:name="flurry_with_crash_reporting" android:value="true" />
+    <meta-data android:name="flurry_with_continue_session_millis" android:value="10000L" />
+    <meta-data android:name="flurry_with_include_background_sessions_in_metrics" android:value="true" />
+    <meta-data android:name="flurry_with_log_enabled" android:value="true" />
+    <meta-data android:name="flurry_with_log_level" android:value="2" />
+    <meta-data android:name="flurry_with_messaging" android:value="true" />
+    <provider android:name="androidx.core.content.FileProvider" android:authorities="com.ommzisolutions.spaceattack.fileprovider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
+    </provider>
+  </application>
+</manifest>

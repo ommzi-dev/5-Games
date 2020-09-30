@@ -1,0 +1,13 @@
+Library/
+New folder/
+obj/
+Temp/
+Packages/
+Logs/
+.vs/
+*.csproj
+Build/
+Assets/Whot/Games/WHOT/WhotScripts/WHOTMultiplayerManager.cs.rej
+Assets/Whot/Games/WHOT/WhotScripts/WHOTMultiplayerManager.cs.rej.meta
+*.meta
+*.log
